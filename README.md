@@ -105,7 +105,7 @@ The script performs all analysis tasks (a)-(f) and generates:
 cambridge_temp_analysis/
 │
 ├── question_3.py          # Main analysis script
-├── cambridge.dta          # A: Input data (Stata format) 
+├── cambridge.dta          # A: Input data (Stata format)
 ├── cambridge.csv          # or B: Input data (CSV format, if available)
 ├── README.md              # This file
 ├── .gitignore            # Git ignore file

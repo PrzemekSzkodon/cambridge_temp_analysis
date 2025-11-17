@@ -39,7 +39,4 @@ Thumbs.db
 
 # Logs
 *.log
-EOF
 
-# Verify it was created
-cat .gitignore

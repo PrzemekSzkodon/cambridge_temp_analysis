@@ -8,6 +8,7 @@ temperature in Cambridge was 19.9 degrees of Celsius.
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
+from statsmodels.graphics.tsaplots import plot_acf
 
 data = pd.read_stata("cambridge.dta")
 print(data.head())
@@ -16,6 +17,14 @@ print(data.info())
 """(a) Make a time series plot of maxtemp. Summarize the behavior of these time series. Plot
 the correlogram of maxtemp. Comment.
 """
+
+
+plt.plot(data["t"], data["maxtemp"])
+plt.title("Monthly mean of daily max temp from 1959 to 2018")
+plt.show()
+
+plot_acf(data["maxtemp"], lags = 24)
+plt.show()
 
 """
 (b) Run the regression of maxtemp on the month dummies (don’t fall into the dummy variable
